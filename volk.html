@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najbolj prodajana Volkswagen vozila</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ADD8E6, #B0E0E6, #87CEEB, #FFFFFF); /* Light Blue and White */
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
+            background: url('vlogo.jpg') no-repeat center; /* Replace with the path to your Volkswagen logo */
+            background-size: contain;
+            opacity: 0.5;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .event {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .event:hover {
+            transform: scale(1.05);
+        }
+
+        .event img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .event a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .back-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="event">
+            <a href="golf.html">
+                <h1>Volkswagen Golf</h1>
+                <img src="vg.jpg" alt="Volkswagen Golf">
+                <p>Klikni za več informacij o Volkswagen Golf.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="event">
+            <a href="passat.html">
+                <h1>Volkswagen Passat</h1>
+                <img src="vpa.jpg" alt="Volkswagen Passat">
+                <p>Klikni za več informacij o Volkswagen Passat.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="event">
+            <a href="tiguan.html">
+                <h1>Volkswagen Tiguan</h1>
+                <img src="vt.jpg" alt="Volkswagen Tiguan">
+                <p>Klikni za več informacij o Volkswagen Tiguan.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="event">
+            <a href="polo.html">
+                <h1>Volkswagen Polo</h1>
+                <img src="vp.jpg" alt="Volkswagen Polo">
+                <p>Klikni za več informacij o Volkswagen Polo.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="event">
+            <a href="arteon.html">
+                <h1>Volkswagen Arteon</h1>
+                <img src="va.jpg" alt="Volkswagen Arteon">
+                <p>Klikni za več informacij o Volkswagen Arteon.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="back-link">
+        <a href="GlavnaStran.html">Nazaj na glavno stran</a>
+    </div>
+
+    <footer>
+        © 2025 AvtoSkit - Prodano. Vse pravice pridržane.
+    </footer>
+</body>
+</html>
