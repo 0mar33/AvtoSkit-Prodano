@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AvtoSkit - Prodano</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+        header {
+            background-color: lightgreen;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255, 255, 0, 0.3) 25%, rgba(255, 255, 0, 0) 75%);
+            animation: wave 3s linear infinite;
+        }
+        @keyframes wave {
+            from {
+                transform: translateX(-50%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            width: 100%;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            text-align: center;
+            padding: 100px 20px;
+            width: 100%;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #FF69B4;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #FF69B4; 
+        }
+        .hero .cta {
+            background-color: #FFD700;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .services, .team, .contact, .testimonials {
+            text-align: center;
+            padding: 40px 20px;
+            width: 100%;
+        }
+        .services h2, .team h2, .contact h2, .testimonials h2 {
+            margin-bottom: 20px;
+        }
+        .services .service, .team .member, .testimonials .testimonial {
+            margin-bottom: 20px;
+        }
+        .service img, .member img, .testimonial img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AvtoSkit - Prodano</h1>
+    </header>
+    <nav>
+        <a href="alfa.html">Alfa Romeo</a>
+        <a href="audi.html">Audi</a>
+		<a href="bmw.html">BMW</a>
+        <a href="mer.html">Mercedez Benz</a>
+        <a href="porsche.html">Porsche</a>
+        <a href="volk.html">Volkswagen</a>
+        <a href="prijava.html">Prijava</a>
+    </nav>
+    <section class="hero">
+        <h1 style="color: #FF69B4;">Pregled Prodanih Vozil</h1>
+        <p style="color: #FF69B4;">Vsa vaša najljubša prodana vozila v prejšnjem in tekočem koledarskem letu na enem mestu.</p>
+        <a href="#contact" class="cta">Kontaktirajte nas</a>
+    </section>
+    <div class="content">
+        <section id="services" class="services">
+            <h2>Naše storitve</h2>
+            <div class="service">
+				<img src="salon.jpg" alt="salon">
+				<p>AvtoSkit - Prodano je edinstvena platforma, ki uporabnikom pomaga pridobiti vpogled v dejanske cene in stanje vozil na slovenskem trgu. Naša spletna stran omogoča dostop do podatkov o zadnje prodanih vozilih, vključno s ceno, kilometri in stanjem ob prodaji. Če želite izvedeti, za koliko se je prodal določen model vozila, vam AvtoSkit omogoča preprosto in pregledno iskanje. Tako lahko kupci pridobijo realno sliko trga in se lažje odločijo pri nakupu. Naše storitve so nepogrešljive za vse, ki želijo transparentnost in zaupanje pri nakupu ali prodaji vozil.</p>
+                <h3>Zakaj mi</h3>
+                <p>"Zakaj Mi?" Naša spletna stran AvtoSkit - Prodano ponuja edinstveno storitev, ki vam pomaga pri nakupu vozila, tako da vam prikažemo, za koliko se je prodal zadnji primer želenega avtomobila v Sloveniji. Z našimi podatki, ki vključujejo ceno, število prevoženih kilometrov in stanje vozila, boste bolje informirani o realni vrednosti avtomobila, ki vas zanima. S tem prihranite čas in denar, saj vam omogočimo pregled najnovejših prodaj v realnem času. Naša stran vam daje vpogled, da se odločite na podlagi natančnih in aktualnih podatkov.</p>
+            </div>
+            <div class="service">
+                <h3>Kontakt - Prodaja</h3>
+				<img src="prodaja.jpg" alt="">
+				<img src="pp.jpg" alt="">
+				<img src="ppp.jpg" alt="">
+                <p>Pri vsakem vozilu na AvtoSkit - Prodano so na voljo kontaktni podatki tako kupca kot tudi prodajalca. Tako lahko enostavno stopite v stik z obema strani za kakršnakoli dodatna vprašanja ali podrobnosti o vozilu, kar vam omogoča transparentnost in lažjo odločitev pri nakupu.</p>
+            </div>
+            <div class="service">
+                <h3>Promocija</h3>
+				<p>Na AvtoSkit - Prodano vam poleg pregleda slovenskih vozil ponujamo tudi promocijo tujih vozil, kar vam omogoča širši spekter izbire pri nakupu. Če iščete vozilo, ki ni na voljo v Sloveniji, vam pomagamo pri iskanju in prinašamo najnovejše ponudbe iz tujine. Prav tako omogočamo, da objavite svoje vozilo na naši spletni strani, kjer bo izpostavljeno potencialnim kupcem, kar povečuje možnosti za hitro in uspešno prodajo. Naša platforma zagotavlja transparentne podatke o vsakem vozilu, s kontaktnimi informacijami za prodajalce in kupce, da se lahko enostavno povežete za dodatna vprašanja.</p>
+            </div>
+        </section>
+        <section id="team" class="team">
+            <h2>Naša ekipa</h2>
+            <div class="member">
+                <img src="o.jpg" alt="Ekipa 1">
+                <h3>Omar Šmrković</h3>
+                <p>Ustanovitelj in direktor</p>
+            </div>
+            <div class="member">
+                <img src="p.jpeg" alt="Ekipa 2">
+                <h3>Papler</h3>
+                <p>Vzdrževalec</p>
+            </div>
+            <div class="member">
+                <img src="g.jpeg" alt="Ekipa 3">
+                <h3>Gox</h3>
+                <p>Vodja prodaje</p>
+            </div>
+        </section>
+        <section id="testimonials" class="testimonials">
+            <h2>Mnenja strank</h2>
+            <div class="testimonial">
+                <img src="dad.jpg" alt="Stranka 1">
+                <p>"AvtoSkit mi je pomagal oceniti realno ceno avtomobila ki sem ga želil kupiti, toplo priporočam - Marko P.</p>
+            </div>
+            <div class="testimonial">
+                <img src="random.jpg" alt="Stranka 2">
+                <p>"Zahvaljujoč AvtoSkitu sem prišparal veliko denarja." - Luka T.</p>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Kontaktirajte nas</h2>
+            <p>Email: info@avtoskit-Prodano.si</p>
+            <p>Telefon: +386 40 123 456</p>
+            <p>Naslov: Paplerjeva ulica 20, 4000 Kranj, Slovenija</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 AvtoSkit - Prodano. Vse pravice pridržane.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW serija X5</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        header {
+            background-color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        body.dark-mode header {
+            background-color: #444;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        body.dark-mode nav ul li a {
+            color: #fff;
+        }
+        .dark-mode-btn {
+            cursor: pointer;
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        body.dark-mode .container {
+            background: #555;
+        }
+        .car-image {
+            position: relative;
+            overflow: hidden;
+        }
+        .car-image img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .car-image:hover img {
+            transform: scale(1.5);
+            transform-origin: var(--mouse-x) var(--mouse-y);
+        }
+        .car-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .car-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        .pricing {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .pricing .discount {
+            color: green;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .pricing .monthly-payment {
+            font-size: 30px;
+            font-weight: bold;
+            color: #000;
+        }
+        body.dark-mode .pricing {
+            background: #666;
+        }
+        .inquiry-btn {
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .highlights, .review {
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="AvtoSkit">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="GlavnaStran.html">Domov</a></li>
+                <li><a href="bmw.html">Modeli</a></li>
+                <li><button class="dark-mode-btn" onclick="toggleDarkMode()">Nočni način</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>BMW serija X5: xDrive45e</h1>
+        <div class="car-info">
+            <div class="car-image" id="carImage">
+                <img src="x55.jpg" alt="Alfa Romeo Giulia">
+            </div>
+            <div class="car-details">
+                <ul>
+                    <li><strong>Moč:</strong> 394  KM</li>
+                    <li><strong>Menjalnik:</strong> Avtomatski</li>
+                    <li><strong>Pogon:</strong> 290 kW</li>
+                    <li><strong>Prevoženi kilometri:</strong> 22.000  km</li>
+                    <li><strong>Gorivo:</strong> hibridni pogon</li>
+                    <li><strong>Letnik:</strong> 2020 </li>
+                    <li><strong>Stanje:</strong> Rabljeno</li>
+                </ul>
+                <div class="pricing">
+                    <span class="discount">Prihranek: 3.200 €</span><br>
+                    <span class="monthly-payment">Prodano : 51.990€</span><br>
+                    <button class="inquiry-btn">Povpraševanje</button>
+                </div>
+            </div>
+        </div>
+        <div class="highlights">
+            <h3>Poudarki</h3>
+            <ul>
+                <li>1. lastnik</li>
+                <li>Brez nesreč</li>
+                <li>4 vrata</li>
+                <li>Poraba: 10,5L/100 km</li>
+            </ul>
+        </div>
+        <div class="review">
+            <h3>Mnenje strank</h3>
+            <p>"Odlična podpora pri nakupu. Avto je brezhiben!" - Jurgen Schmidt</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 AvtoSkit - Prodano. Vse pravice pridržane.</p>
+    </footer>
+    <script>
+	const carImage = document.getElementById('carImage');
+    const zoomElement = document.createElement('div');
+    zoomElement.classList.add('zoom');
+    carImage.appendChild(zoomElement);
+
+    carImage.addEventListener('mousemove', function (event) {
+        const bounds = carImage.getBoundingClientRect();
+        const x = event.clientX - bounds.left;
+        const y = event.clientY - bounds.top;
+
+        zoomElement.style.left = `${x - zoomElement.offsetWidth / 2}px`;
+        zoomElement.style.top = `${y - zoomElement.offsetHeight / 2}px`;
+        zoomElement.style.backgroundImage = `url('g2.jpg')`;
+        zoomElement.style.backgroundPosition = `-${x * 2 - zoomElement.offsetWidth / 2}px -${y * 2 - zoomElement.offsetHeight / 2}px`;
+    });
+
+    carImage.addEventListener('mouseleave', function () {
+        zoomElement.style.transform = 'scale(0)';
+    });
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>

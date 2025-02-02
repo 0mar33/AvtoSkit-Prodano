@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najbolj prodajana Audi vozila</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #FF0000, #FFFFFF, #000000); /* Audi colors: Red, White, Black */
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
+            background: url('audi.jpg') no-repeat center; /* Replace with the path to your Audi logo */
+            background-size: contain; /* Ensure the logo scales proportionally */
+            opacity: 0.5; /* Subtle transparency */
+            z-index: 0;
+            pointer-events: none; /* Prevent interactions with the logo */
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .event {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .event:hover {
+            transform: scale(1.05);
+        }
+
+        .event img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .event a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .back-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="event">
+            <a href="a3.html">
+                <h1>Audi A3</h1>
+                <img src="a3.jpg" alt="Audi A3">
+                <p>Klikni za več informacij o Audi A3.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="event">
+            <a href="a4.html">
+                <h1>Audi A4</h1>
+                <img src="a4.jpg" alt="Audi A4">
+                <p>Klikni za več informacij o Audi A4.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="event">
+            <a href="a6.html">
+                <h1>Audi A6</h1>
+                <img src="a6.jpg" alt="Audi A6">
+                <p>Klikni za več informacij o Audi A6.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="event">
+            <a href="a8.html">
+                <h1>Audi A8</h1>
+                <img src="a8.jpg" alt="Audi A8">
+                <p>Klikni za več informacij o Audi A8.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="event">
+            <a href="q7.html">
+                <h1>Audi Q7</h1>
+                <img src="q7.jpg" alt="Audi Q7">
+                <p>Klikni za več informacij o Audi Q7.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="back-link">
+        <a href="GlavnaStran.html">Nazaj na glavno stran</a>
+    </div>
+    <footer>
+        © 2025 AvtoSkit - Prodano. Vse pravice pridržane.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najbolj prodajana Porsche vozila</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #FFD700, #FFCC00, #FFB800, #FF9900); /* Gold shades */
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
+            background: url('porsche.jpg') no-repeat center; /* Replace with the path to your Porsche logo */
+            background-size: contain;
+            opacity: 0.5;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .event {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .event:hover {
+            transform: scale(1.05);
+        }
+
+        .event img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .event a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .back-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="event">
+            <a href="911.html">
+                <h1>Porsche 911</h1>
+                <img src="p9.jpg" alt="Porsche 911">
+                <p>Klikni za več informacij o Porsche 911.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="event">
+            <a href="cayenne.html">
+                <h1>Porsche Cayenne</h1>
+                <img src="pc.jpg" alt="Porsche Cayenne">
+                <p>Klikni za več informacij o Porsche Cayenne.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="event">
+            <a href="macan.html">
+                <h1>Porsche Macan</h1>
+                <img src="pm.jpg" alt="Porsche Macan">
+                <p>Klikni za več informacij o Porsche Macan.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="event">
+            <a href="panamera.html">
+                <h1>Porsche Panamera</h1>
+                <img src="pp3.jpg" alt="Porsche Panamera">
+                <p>Klikni za več informacij o Porsche Panamera.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="event">
+            <a href="taycan.html">
+                <h1>Porsche Taycan</h1>
+                <img src="pt.jpg" alt="Porsche Taycan">
+                <p>Klikni za več informacij o Porsche Taycan.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="back-link">
+        <a href="GlavnaStran.html">Nazaj na glavno stran</a>
+    </div>
+
+    <footer>
+        © 2025 AvtoSkit - Prodano. Vse pravice pridržane.
+    </footer>
+</body>
+</html>
